@@ -15,5 +15,5 @@ Read the soy. Read it. (t, Soydevs)
 
 ## Project management
 
-[Github Kanban](https://github.com/users/magickme/projects/3/views/1)
-[Wireframe](https://www.figma.com/file/uMUDafEHprAMZAykSFYTQE/soyreaderv2)
++ [Kanban](https://github.com/users/magickme/projects/3/views/1)
++ [Wireframe](https://www.figma.com/file/uMUDafEHprAMZAykSFYTQE/soyreaderv2)
