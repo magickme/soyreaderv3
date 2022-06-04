@@ -1,2 +1,20 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    import Search from './components/search/search.svelte';
+    import Feed from './components/feed/feed.svelte';
+</script>
+
+<svelte:head>
+    <title>Soyreader</title>
+</svelte:head>
+
+<br /><Search />
+
+<br /><Feed />
+<br /><Feed />
+<br /><Feed />
+
+<style>
+    body {
+        background-color: #121212;
+    }
+</style>
