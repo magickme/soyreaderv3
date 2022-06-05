@@ -1,12 +1,11 @@
 import '@testing-library/jest-dom';
-import { render } from '@testing-library/svelte';
-import addSub from './addSub.svelte';
+import { render, screen } from '@testing-library/svelte';
+import AddSub from './addSub.svelte';
 
-test('Add Subreddit button renders ', () => {
-    render(addSub);
-});
-
-test('Add Subreddit text renders', () => {
-    const { getByText } = render(addSub, { name: 'Add Subreddit' })
-    expect(getByText('Add')).toBeInTheDocument()
+describe('Add subreddit button', () => {
+    it('renders button', () => {
+        render(AddSub);
+        const button = screen.getByRole('button', { name: 'Add' })
+        expect(button).toBeInTheDocument();
+    });
 });

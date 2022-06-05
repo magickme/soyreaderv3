@@ -2,7 +2,7 @@
     <title>About Soyreader</title>
 </svelte:head>
 
-<div id="about">
+<div role="article" id="about-page" aria-label="about-page">
     <h1>About Soyreader</h1><br />
 
     <p>Soyreader is an app for aggregating subreddits in text-based feeds, based on the old AggReddit app which has disappeared.</p><br />
@@ -14,7 +14,7 @@
     h1 {
         font-size: 2em;
     }
-    #about {
+    #about-page {
         color: white;
         text-align: center;
         padding: 20px 0 0 0;

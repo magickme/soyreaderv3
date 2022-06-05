@@ -1,11 +1,18 @@
 import '@testing-library/jest-dom';
-import { render } from '@testing-library/svelte';
+import { render, screen } from '@testing-library/svelte';
 import Feed from './feed.svelte';
-test('Subreddit feed renders', () => {
-    render(Feed);
-});
 
-test('Subreddit feed title renders', () => {
-    const { getByText } = render(Feed, { name: 'Subreddit feed' })
-    expect(getByText('/r/all')).toBeInTheDocument()
+describe('Subreddit feed component renders', () => {
+    it('renders component', () => {
+        render(Feed);
+        const subreddit = screen.getByRole('feed', {
+            name: 'subreddit-feed'
+        });
+        expect(subreddit).toBeInTheDocument();
+    });
+    it('renders button', () => {
+        render(Feed);
+        const button = screen.getByRole('button', { name: 'Delete' });
+        expect(button).toBeInTheDocument();
+    })
 });

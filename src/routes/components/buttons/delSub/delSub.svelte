@@ -1,10 +1,6 @@
-<script>
-    export let label = 'Remove';
-</script>
-
 <div>
     <button>
-        <p>{label}</p>
+        <p>Delete</p>
     </button>
 </div>
 
