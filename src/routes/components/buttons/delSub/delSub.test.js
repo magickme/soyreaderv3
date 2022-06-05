@@ -7,5 +7,5 @@ describe('Delete subreddit button renders', () => {
         render(DelSub);
         const button = screen.getByRole('button', { name: 'Delete' });
         expect(button).toBeInTheDocument();
-    })
+    });
 })
