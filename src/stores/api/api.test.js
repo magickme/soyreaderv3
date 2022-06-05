@@ -35,43 +35,14 @@ describe('Reddit API call', () => {
         });
     });
     describe('Make simple call to Reddit API', () => {
-        it('make async call, without variables, test that it responds', async() => {
-            const url = 'https://www.reddit.com/r/all/top.json?t=today&limit=5';
-            const res = await fetch(url);
+        it('simple API call, no variables', async() => {
+            const subUrl = 'https://www.reddit.com/r/all/top.json?t=today&limit=5';
+            const res = await fetch(subUrl);
             console.log(res);
+            const subData = await res.json();
+            console.log(subData);
             expect(res).not.toBeNull();
+            expect(subData).not.toBeNull();
         });
     });
 });
-
-
-
-
-/*
-
- it('Define URL', () => {
-            const url: string = `
-                    https: //www.reddit.com/r/${sub}/${sort}.json?t=${time}&limit=${limit}`;
-                })
-            });
-
-            export const subreddit = writable([]);
-
-            export const fetchSubreddit = async(sub, sort, time, limit) => {
-                const url = `https://www.reddit.com/r/${sub}/${sort}.json?t=${time}&limit=${limit}`;
-                const res = await fetch(url);
-                const data = await res.json();
-                const loadedSubreddit = data.data.children.map((data, index) => ({
-                    id: index + 1,
-                    title: data.data.title,
-                    author: data.data.author,
-                    thumbnail: data.data.thumbnail,
-                    selftext: data.data.selftext,
-                    subreddit_name_prefixed: data.data.subreddit_name_prefixed,
-                    url: data.data.url
-                }));
-                subreddit.set(loadedSubreddit);
-            };
-            fetchSubreddit("linux", "top", "today", 100);
-
-*/
