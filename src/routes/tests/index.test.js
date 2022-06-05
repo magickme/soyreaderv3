@@ -13,6 +13,7 @@ describe('Index successfully renders all components and subcomponents', () => {
         const button = screen.getByRole('button', { name: 'Add' })
         expect(button).toBeInTheDocument();
     });
+
     /**
      * Tests fail when a component renders multiple times on a page. How to fix?
      */
@@ -28,4 +29,11 @@ describe('Index successfully renders all components and subcomponents', () => {
         const button = screen.getByRole('button', { name: 'Delete' });
         expect(button).toBeInTheDocument();
     }) */
+    it('renders footer', () => {
+        render(Index);
+        const foot = screen.getByRole('contentInfo', {
+            name: 'footer'
+        });
+        expect(foot).toBeInTheDocument();
+    });
 });

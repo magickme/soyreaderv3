@@ -1,8 +1,14 @@
+<script>
+    let src = "/wojak.png";
+</script>
+
 <svelte:head>
     <title>About Soyreader</title>
 </svelte:head>
 
 <div role="article" id="about-page" aria-label="about-page">
+    <img {src} alt="Soydev" />
+
     <h1>About Soyreader</h1><br />
 
     <p>Soyreader is an app for aggregating subreddits in text-based feeds, based on the old AggReddit app which has disappeared.</p><br />
