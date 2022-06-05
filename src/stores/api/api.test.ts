@@ -15,28 +15,25 @@
  * - limit [number to fetch - 5 or 10]
  */
 
-import { writable } from 'svelte/store';
-
 require('isomorphic-fetch');
+import { writable } from 'svelte/store';
 
 describe('Reddit API call', () => {
     describe('Make simple call to Reddit API', () => {
         it('simple API call, no variables', async() => {
-            const subUrl: string = 'https://www.reddit.com/r/all/top.json?t=today&limit=5';
-            const res = await fetch(subUrl);
-            console.log(res);
-            const subData = await res.json();
-            console.log(subData);
-            const subLoad = subData.data.children.map((subData: any, index: number) => ({
+            const redditUrl: string = 'https://www.reddit.com/r/all/top.json?t=today&limit=5';
+            const res = await fetch(redditUrl);
+            const redditData = await res.json();
+            const redditLoad = redditData.data.children.map((redditData: any, index: number) => ({
                 id: index + 1,
-                title: subData.data.title,
-                url: subData.data.url
+                title: redditData.data.title,
+                subreddit_name_prefixed: redditData.data.subreddit_name_prefixed,
+                url: redditData.data.url
             }));
-            console.log(subLoad);
 
             expect(res).not.toBeNull();
-            expect(subData).not.toBeNull();
-            expect(subLoad).not.toBeNull();
+            expect(redditData).not.toBeNull();
+            expect(redditLoad).not.toBeNull();
         });
     });
 });
