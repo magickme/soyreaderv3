@@ -20,29 +20,23 @@ import { writable } from 'svelte/store';
 require('isomorphic-fetch');
 
 describe('Reddit API call', () => {
-    describe('Define and set default value of variables', () => {
-        it('defines subreddit', () => {
-            let subreddit = 'all';
-        });
-        it('defines sort order', () => {
-            let sort = 'top';
-        });
-        it('defines timeframe', () => {
-            let time = 'today';
-        });
-        it('defines limit', () => {
-            let limit = 5;
-        });
-    });
     describe('Make simple call to Reddit API', () => {
         it('simple API call, no variables', async() => {
-            const subUrl = 'https://www.reddit.com/r/all/top.json?t=today&limit=5';
+            const subUrl: string = 'https://www.reddit.com/r/all/top.json?t=today&limit=5';
             const res = await fetch(subUrl);
             console.log(res);
             const subData = await res.json();
             console.log(subData);
+            const subLoad = subData.data.children.map((subData: any, index: number) => ({
+                id: index + 1,
+                title: subData.data.title,
+                url: subData.data.url
+            }));
+            console.log(subLoad);
+
             expect(res).not.toBeNull();
             expect(subData).not.toBeNull();
+            expect(subLoad).not.toBeNull();
         });
     });
 });
