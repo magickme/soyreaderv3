@@ -1,7 +1,8 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/svelte';
 import Index from '../index.svelte';
-
+import { fetchedSubreddit } from '../../stores/api/api.js';
+import Feed from '../components/feed/feed.svelte';
 
 describe('Index successfully renders all components and subcomponents', () => {
     it('renders search bar', () => {
