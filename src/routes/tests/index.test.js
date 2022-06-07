@@ -10,7 +10,7 @@ describe('Index successfully renders all components and subcomponents', () => {
         const search = screen.getByRole('search', { name: 'search-bar' });
         expect(search).toBeInTheDocument();
     });
-    it('renders add button', () => {
+    it('renders add butlet filteredPosts = [...fetchedSubreddit];ton', () => {
         render(Index);
         const button = screen.getByRole('button', { name: 'Add' })
         expect(button).toBeInTheDocument();
@@ -19,7 +19,7 @@ describe('Index successfully renders all components and subcomponents', () => {
     /**
      * Tests fail when a component renders multiple times on a page. How to fix?
      */
-    /*  it('renders feed', () => {
+    it('renders feed', () => {
         render(Index);
         const subreddit = screen.getByRole('feed', {
             name: 'subreddit-feed'
@@ -30,7 +30,7 @@ describe('Index successfully renders all components and subcomponents', () => {
         render(Index);
         const button = screen.getByRole('button', { name: 'Delete' });
         expect(button).toBeInTheDocument();
-    }) */
+    });
     it('renders footer', () => {
         render(Index);
         const foot = screen.getByRole('contentinfo', {

@@ -1,7 +1,8 @@
 <script>
+    export let redditpost;
     import DelSub from '../buttons/delSub/delSub.svelte';
-    let subreddit = "r/all";
-    let post = "Thick Face, Black Heart: Path to thriving, winning & succeeding, Chin-Ning Chu";
+    /* let subreddit = "r/all";
+    let post = "Thick Face, Black Heart: Path to thriving, winning & succeeding, Chin-Ning Chu"; */
     let url = "https://www.reddit.com/";
     let sort = "Top";
 
@@ -15,12 +16,8 @@
         </div>
 
         <div class="mt-2">
-            <p class="text-2xl font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 hover:underline">{subreddit}</p>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">{post}</p>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">{post}</p>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">{post}</p>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">{post}</p>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">{post}</p>
+            <!-- <p class="text-2xl font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 hover:underline">{redditpost.subreddit_name_prefixed}</p> -->
+            <p class="mt-2 text-gray-600 dark:text-gray-300">{redditpost.title}</p>
         </div>
 
         <div class="flex items-center justify-between mt-4">
