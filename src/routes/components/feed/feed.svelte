@@ -15,7 +15,7 @@
         </div>
 
         <div class="mt-2">
-            <a href="#" class="text-2xl font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 hover:underline">{subreddit}</a>
+            <p class="text-2xl font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 hover:underline">{subreddit}</p>
             <p class="mt-2 text-gray-600 dark:text-gray-300">{post}</p>
             <p class="mt-2 text-gray-600 dark:text-gray-300">{post}</p>
             <p class="mt-2 text-gray-600 dark:text-gray-300">{post}</p>
@@ -30,7 +30,7 @@
 </section>
 
 <style>
-    .feed {
+    section {
         background-color: whitesmoke;
     }
 </style>

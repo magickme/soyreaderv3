@@ -1,8 +1,8 @@
-<div role="contentInfo" aria-label="footer" style="padding-top:200px;">
+<div role="contentinfo" aria-label="footer" style="padding-top:200px;">
     <footer class="bg-white dark:bg-gray-800">
         <div class="container px-6 py-8 mx-auto">
             <div class="text-center">
-            <a href="#" class="text-2xl font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">Soyreader</a>
+            <a href="/" class="text-2xl font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">Soyreader</a>
 
             <p class="max-w-md mx-auto mt-2 text-gray-500 dark:text-gray-400">A new kind of Reddit aggregator.<br />For information&#8212;not phytoestrogens.</p>
 

@@ -15,9 +15,3 @@
 <br /><Feed />
 
 <br /><Footer />
-
-<style>
-    body {
-        background-color: #121212;
-    }
-</style>
