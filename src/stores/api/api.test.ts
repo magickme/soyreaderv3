@@ -21,7 +21,7 @@ import { writable } from 'svelte/store';
 describe('Reddit API call', () => {
     describe('Make simple call to Reddit API', () => {
         it('simple API call, no variables', async() => {
-            const redditUrl: string = 'https://www.reddit.com/r/all/top.json?t=today&limit=5';
+            const redditUrl: string = 'https://www.reddit.com/r/worldnews/top.json?t=today&limit=5';
             const res = await fetch(redditUrl);
             const redditData: any = await res.json();
             const redditLoad: any = redditData.data.children.map((redditData: any, index: number) => ({

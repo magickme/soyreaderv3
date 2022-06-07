@@ -5,7 +5,7 @@ import Footer from './footer.svelte';
 describe('footer component renders', () => {
     it('renders footer', () => {
         render(Footer);
-        const foot = screen.getByRole('contentInfo', {
+        const foot = screen.getByRole('contentinfo', {
             name: 'footer'
         });
         expect(foot).toBeInTheDocument();

@@ -2,6 +2,7 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/svelte';
 import Index from '../index.svelte';
 
+
 describe('Index successfully renders all components and subcomponents', () => {
     it('renders search bar', () => {
         render(Index);
@@ -31,7 +32,7 @@ describe('Index successfully renders all components and subcomponents', () => {
     }) */
     it('renders footer', () => {
         render(Index);
-        const foot = screen.getByRole('contentInfo', {
+        const foot = screen.getByRole('contentinfo', {
             name: 'footer'
         });
         expect(foot).toBeInTheDocument();

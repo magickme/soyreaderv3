@@ -7,7 +7,7 @@ import { writable } from 'svelte/store';
 export const fetchedSubreddit = writable([]);
 
 export const fetchSubreddit = async() => {
-    const redditUrl: string = 'https://www.reddit.com/r/all/top.json?t=today&limit=5';
+    const redditUrl: string = 'https://www.reddit.com/r/worldnews/top.json?t=today&limit=5';
     const res = await fetch(redditUrl);
     const redditData: any = await res.json();
     const redditLoad: any = redditData.data.children.map((redditData: any, index: number) => ({
@@ -18,3 +18,4 @@ export const fetchSubreddit = async() => {
     }));
     fetchedSubreddit.set(redditLoad);
 };
+fetchSubreddit();
